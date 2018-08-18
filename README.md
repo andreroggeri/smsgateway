@@ -4,10 +4,13 @@ and broke the library that I was using, so I decided to make my own version
 
 # Usage
 
+## Installing
+`pip install smsgateway`
+
 ## Token
 Get your API Token in the [settings page](https://smsgateway.me/dashboard/settings)
 
-## Client initalization
+## Client initialization
 Before starting is necessary to create the client with the token as parameter
 ```
 from smsgateway import SMSGateway, Message
