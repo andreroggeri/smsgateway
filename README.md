@@ -3,7 +3,35 @@ Recently the implementation of the smsgateway.me for sending/receiving SMS's has
 and broke the library that I was using, so I decided to make my own version
 
 # Usage
-TBD (Add docs also)
+
+## Token
+Get your API Token in the [settings page](https://smsgateway.me/dashboard/settings)
+
+## Client initalization
+Before starting is necessary to create the client with the token as parameter
+```
+from smsgateway import SMSGateway, Message
+client = SMSGateway('your-api-token-here-keep-it-secret')
+```
+
+## Device lookup
+Sending messages requires the device id, so its necessary to get it
+```
+devices = client.search_devices()
+if len(devices['results']) == 0:
+  raise Exception('No device found on your account')
+  
+did = devices['results'][0]['id']
+```
+> Its possible to pass a filter object as parameter as [specified on the docs](https://smsgateway.me/sms-api-documentation/devices/searching-android-devices)
+
+## Sending messages
+```
+message1 = Message('12345678', 'Message 1 body', did)
+message2 = Message('12345678', 'Message 2 body', did)
+status = client.send_message(message1, message2)
+print(status)
+```
 
 # Support
 I decided to implement only the endpoints that I need, but if you need anything else, please make a PR :)
@@ -38,4 +66,4 @@ Below what is already implemented and what's not:
 TBD
 
 # Contributing
-PR's are welcome, please make sure to include tests to cover anything new.
+PR's are welcome
