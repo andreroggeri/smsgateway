@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='smsgateway',
+    name='smsgateway-v4',
     version='0.0',
     url='https://github.com/andreroggeri/smsgateway',
     author='André Roggeri Campos',
