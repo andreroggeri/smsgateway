@@ -1,0 +1,13 @@
+language: python
+python:
+- '3.6'
+script:
+- echo "ok"
+deploy:
+  provider: pypi
+  user: andreroggeri
+  skip_upload_docs: true
+  password:
+    secure: lbGqQFwI65cgWp2yfv0FaRlTDM+kPQGnRwFvUI7C0ISHOpkrnIOnfYPc+wnwuygXkoEp5F9b5lyGELSBPjOwpttDSGcKJd6sbyMlLsR6KffInUeOaT54lKf97M0sgNvUke0GBAT4QGB8gXEzzysVjkywPlhc7g6ENdEVqATVNiXsRRtqCRIUVw58yfH0a2AnRSRxb5IAFtHVP65gqwoqUKiV6SN8zGfDrC+VCGBvzu11GY0GvliQguCJDLXWZFt8RUAHeoI/vMkKyEHWGi1O4CT8c+2v/BPs6Cg9Yvk58v8aBARjjNx9QkIGBbh6jYKjTMiKe2YQyCL3xD/6wO/dwEDw3iWLTZDJRVvdM414Cq8hHR47i9YkPNpdiIWwSxpDDDMKsaBSPFf+4LQdvmHKgFvitTJBPQVYhnuO8IPlz2NfRMOhbF/ypTQWrC4D1MI+M/1Cpb1QgWDdrLice5AioB7Hx4FsvzHMArMZ1yFHDZzoKcSOqimm52agLNhVXH/kFi/rIrOuG3+HX/TfKoih9OUA1KpN5FtIM5AUwzQO2dbDIZ4OMfE5dUiMekU5a4ReehC8SQqwdJAwczkzUxIwkjDZ6/AR3kYgQMgfmWjG9z1anI6Zh6U03qM1haB6IEXNwdzDQX8j7jtPLy3Ak4b2koeiLiL8+i2LmtsmEqkmnSg=
+  on:
+    all_branches: true
