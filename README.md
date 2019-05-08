@@ -31,7 +31,7 @@ did = devices['results'][0]['id']
 ```
 message1 = Message('12345678', 'Message 1 body', did)
 message2 = Message('12345678', 'Message 2 body', did)
-status = client.send_message(message1, message2)
+status = client.send_sms(message1, message2)
 print(status)
 ```
 
